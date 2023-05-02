@@ -1,0 +1,8 @@
+CREATE DATABASE livraria;
+USE livraria;
+CREATE TABLE livros (
+codigo INT PRIMARY KEY AUTO_INCREMENT,
+titulo VARCHAR (100) NOT NULL,
+autor VARCHAR(100),
+preco FLOAT
+);

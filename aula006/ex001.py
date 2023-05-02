@@ -30,6 +30,17 @@ def listar():
         print("Autor:", linha[2])
         print("Preço:", linha[3])
 
+def pesquisar():
+    print('  == PESQUISA DE LIVROS ==')
+    titulo = input('Título do livro')
+    autor = input('Autor do livro')
+
+    cursor.execute(f'''SELECT * FROM livros WHERE titulo LIKE '%{titulo}%' AND autor LIKE '%{autor}%' ''')
+    for linha in cursor:
+        print("Código:", linha[0])
+        print("Título:", linha[1])
+        print("Autor:", linha[2])
+        print("Preço:", linha[3])
 
 ######  MENU PRINCIPAL  ##########
 
@@ -37,6 +48,7 @@ while True:
     print(" ==== MENU DO SISTEMA ====")
     print('1. Cadastrar')
     print('2. Listar')
+    print('3. Pesquisar')
     print('5. Sair')
 
     opcao = input("opção:")
@@ -44,8 +56,11 @@ while True:
     if opcao == "1":
        cadastro()
 
-    if opcao == "2":
+    elif opcao == "2":
        listar()
+
+    elif opcao == "3":
+       pesquisar()
 
     elif opcao == '5':
         print('Até a próxima!')
