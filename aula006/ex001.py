@@ -42,6 +42,29 @@ def pesquisar():
         print("Autor:", linha[2])
         print("Preço:", linha[3])
 
+## FUNÇÃO ALTERAR ##############################
+def alterar():
+    print("== ALTERAR DADOS DO LIVRO ==")
+    codigo = input("Código do livro: ")
+    cursor.execute(
+    "SELECT * FROM livros WHERE codigo = " + codigo)
+    dados = cursor.fetchall() #converte pra lista
+    if len(dados) == 0:
+        print("Código não encontrado. \n")
+    else:
+        print("== Dados do livro ==")
+        print("titulo:", dados[0][1])
+        print("autor:", dados[0][2])
+        print("preco:", dados[0][3])
+        print("----------------------------")
+        coluna = input("Qual coluna deseja alterar? ")
+        valor = input(f"Qual o novo {coluna}? ")
+        cursor.execute(f'''UPDATE livros
+                    SET {coluna} = '{valor}'
+                    WHERE codigo = {codigo}''')
+        conexao.commit()
+        print("Alterado com sucesso. \n\n")
+
 ######  MENU PRINCIPAL  ##########
 
 while True:
@@ -49,6 +72,7 @@ while True:
     print('1. Cadastrar')
     print('2. Listar')
     print('3. Pesquisar')
+    print('4. ALTERAR')
     print('5. Sair')
 
     opcao = input("opção:")
@@ -61,6 +85,9 @@ while True:
 
     elif opcao == "3":
        pesquisar()
+
+    elif opcao == "4":
+       alterar()
 
     elif opcao == '5':
         print('Até a próxima!')
