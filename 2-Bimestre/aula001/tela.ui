@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>300</width>
+    <height>200</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -28,7 +28,84 @@
   <property name="windowTitle">
    <string>Programa</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.png</normaloff>icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_nome">
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Algerian</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(17, 120, 255)rgb(0, 0, 255)</string>
+      </property>
+      <property name="text">
+       <string>Seu nome:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_nome">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="maxLength">
+       <number>15</number>
+      </property>
+      <property name="placeholderText">
+       <string>Nome completo</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_email">
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>E-mail:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit__email"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_salvar">
+      <property name="text">
+       <string>Salvar</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>save-button-vector-12486636.jpg</normaloff>save-button-vector-12486636.jpg</iconset>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
