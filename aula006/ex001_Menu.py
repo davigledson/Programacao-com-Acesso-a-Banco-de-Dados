@@ -57,6 +57,7 @@ def alterar():
         print("autor:", dados[0][2])
         print("preco:", dados[0][3])
         print("----------------------------")
+
         coluna = input("Qual coluna deseja alterar? ")
         valor = input(f"Qual o novo {coluna}? ")
         cursor.execute(f'''UPDATE livros
