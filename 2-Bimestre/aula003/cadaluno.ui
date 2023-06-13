@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CadAluno</class>
+ <widget class="QMainWindow" name="CadAluno">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>595</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cadastro de Aluno</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_nome">
+      <property name="text">
+       <string>Nome:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_nome"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_curso">
+      <property name="text">
+       <string>Curso:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="comboBox_curso">
+      <item>
+       <property name="text">
+        <string>Informatica</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>edificaçoes</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>eletrica</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>mecanica</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_turno">
+      <property name="text">
+       <string>turno:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QRadioButton" name="radioButton_manha">
+        <property name="text">
+         <string>Manhã</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_tarde">
+        <property name="text">
+         <string>Tarde</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_noite">
+        <property name="text">
+         <string>Noite</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_extra">
+      <property name="text">
+       <string>Extra:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QCheckBox" name="checkBox_atleta">
+        <property name="text">
+         <string>Atleta</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox_bolsista">
+        <property name="text">
+         <string>Bolsista</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="1">
+     <widget class="QTextEdit" name="textEdit_obs"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_obs">
+      <property name="text">
+       <string>Obs.:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="pushButton_salva">
+      <property name="text">
+       <string>Salvar</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
