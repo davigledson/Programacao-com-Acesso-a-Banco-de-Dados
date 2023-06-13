@@ -10,9 +10,8 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 
 import mysql.connector
 conexao = mysql.connector.connect(
-    host='localhost',user='root',
-    password='',database='escola'
-)
+    host='localhost', user='root',
+    password='', database='escola')
 
 cursor = conexao.cursor()
 
@@ -129,6 +128,11 @@ class Ui_CadAluno(object):
 
         obs = self.textEdit_obs.toPlainText()
         print(nome,curso,turno,atleta,bolsista,obs)
+
+        sql = "INSERT INTO aluno VALUES(null,%s,%s,%s,%s,%s,%s)"
+        cursor.execute(sql, (nome,curso,turno,atleta,bolsista,obs))
+        conexao.commit()
+        print('INSERIDO COM SUCESSO')
 
 if __name__ == "__main__":
     import sys
