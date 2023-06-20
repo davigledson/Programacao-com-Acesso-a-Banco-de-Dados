@@ -10,13 +10,14 @@ conexao = mysql.connector.connect(
     host='localhost', user='root',
     password='', database='escola'
 )
+cursor = conexao.cursor()
 from PyQt6 import QtCore, QtWidgets
 from PyQt6.QtWidgets import  QMessageBox
 
 
 
 
-cursor = conexao.cursor()
+
 
 
 class Ui_CadAluno(object):
