@@ -129,11 +129,28 @@ class Ui_MainWindow(object):
         codigo = self.lineEdit_codigo.text()
         sql= "SELECT * FROM aluno WHERE codigo = " + codigo
         cursor.execute(sql)
-        dados = cursor.fetchone()
+        dados = cursor.fetchall()
 
         if len(dados) >0: # o registro existe
-            self.lineEdit_nome.setText(dados[1])
+            self.lineEdit_nome.setText(dados[0][1])
+            self.comboBox_curso.setCurrentText(dados[0][2])
+            if dados[0][3] == "Manhã":
+                self.radioButton_manha_2.setChecked(True)
+            elif dados[0][3] == 'Tarde':
+                self.radioButton_tarde_2.setChecked(True)
+            elif dados[0][3] == 'Noite':
+                self.radioButton_noite_2.setChecked(True)
 
+            if dados[0][4] == "Sim":
+                self.checkBox_bolsista_2.setChecked(True)
+            else:
+                self.checkBox_bolsista_2.setChecked(False)
+            if dados[0][5] == "Sim":
+                self.checkBox_atleta_2.setChecked(True)
+            else:
+                self.checkBox_atleta_2.setChecked(False)
+
+            self.textEdit_obs.setPlainText(dados[0][6])
         else:
             print('REGISTRO NÃO ENCONTRADO')
 
