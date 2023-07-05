@@ -14,7 +14,7 @@ cursor = conexao.cursor()
 print('conectado ao DB')
 
 from PyQt6 import QtCore, QtGui, QtWidgets
-
+from PyQt6.QtWidgets import  QMessageBox
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -119,6 +119,7 @@ class Ui_MainWindow(object):
         self.label_extra.setText(_translate("MainWindow", "Extra:"))
         self.label_obs.setText(_translate("MainWindow", "Obs.:"))
         self.pushButton_salva.setText(_translate("MainWindow", "Atualizar"))
+        self.pushButton_salva.clicked.connect(self.atualizar)
         self.radioButton_manha_2.setText(_translate("MainWindow", "Manhã"))
         self.radioButton_tarde_2.setText(_translate("MainWindow", "Tarde"))
         self.radioButton_noite_2.setText(_translate("MainWindow", "Noite"))
@@ -141,18 +142,98 @@ class Ui_MainWindow(object):
             elif dados[0][3] == 'Noite':
                 self.radioButton_noite_2.setChecked(True)
 
-            if dados[0][4] == "Sim":
-                self.checkBox_bolsista_2.setChecked(True)
-            else:
-                self.checkBox_bolsista_2.setChecked(False)
-            if dados[0][5] == "Sim":
+            if dados[0][4] == 'Sim' or dados[0][4] == 'sim':
                 self.checkBox_atleta_2.setChecked(True)
             else:
                 self.checkBox_atleta_2.setChecked(False)
 
+            if dados[0][5] == 'Sim' or dados[0][5] == 'sim':
+                self.checkBox_bolsista_2.setChecked(True)
+            else:
+                self.checkBox_bolsista_2.setChecked(False)
+
+
             self.textEdit_obs.setPlainText(dados[0][6])
+
+            # bloquear campo do codigo
+
+            self.lineEdit_codigo.setReadOnly(True)
+
         else:
             print('REGISTRO NÃO ENCONTRADO')
+            msg = QMessageBox()
+            msg.setWindowTitle('AVISO')
+            msg.setText('REGISTRO NÃO ENCONTRADO')
+            msg.exec()
+
+            #limpar os campos
+            self.lineEdit_nome.setText("")
+            self.comboBox_curso.setCurrentIndex(0)
+            self.radioButton_manha_2.setChecked(True)
+
+            self.checkBox_atleta_2.setChecked(False)
+            self.checkBox_bolsista_2.setChecked(False)
+
+            self.textEdit_obs.setPlainText("")
+
+            # desbloquear o campo do codigo
+            self.lineEdit_codigo.setReadOnly(False)
+
+    def atualizar(self):
+        codigo = self.lineEdit_codigo.text()
+        nome = self.lineEdit_nome.text()
+        curso = self.comboBox_curso.currentText()
+        turno = ""
+        if self.radioButton_manha_2.isChecked():
+            turno = 'Manhã'
+        elif self.radioButton_tarde_2.isChecked():
+            turno = 'Tarde'
+        elif self.radioButton_noite_2.isChecked():
+            turno = 'Noite'
+
+        atleta = 'Não'
+        if self.checkBox_atleta_2.isChecked():
+            atleta = 'Sim'
+
+        bolsista = 'Não'
+        if self.checkBox_bolsista_2.isChecked():
+            bolsista = 'Sim'
+
+        obs = self.textEdit_obs.toPlainText()
+
+
+
+        sql = ''' UPDATE aluno SET
+        nome = %s,
+        curso = %s,
+        turno = %s,
+        atleta = %s,
+        bolsista = %s,
+        obs = %s 
+        WHERE codigo = %s
+        '''
+
+        cursor.execute(sql,(nome,curso,turno,atleta,bolsista,obs,codigo))
+        conexao.commit()
+
+        print('REGISTRO ALTERADO COM SUCESSO')
+        msg = QMessageBox()
+        msg.setWindowTitle('AVISO')
+        msg.setText('REGISTRO ALTERADO COM SUCESSO')
+        msg.exec()
+
+        # limpar os campos
+        self.lineEdit_nome.setText("")
+        self.comboBox_curso.setCurrentIndex(0)
+        self.radioButton_manha_2.setChecked(True)
+
+        self.checkBox_atleta_2.setChecked(False)
+        self.checkBox_bolsista_2.setChecked(False)
+
+        self.textEdit_obs.setPlainText("")
+
+
+
 
 if __name__ == "__main__":
     import sys
