@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PesqAluno</class>
+ <widget class="QMainWindow" name="PesqAluno">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>521</width>
+    <height>338</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Pesquisa de Aluno</string>
+  </property>
+  <widget class="QWidget" name="centralwidget_pesquisa">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label_nome">
+        <property name="styleSheet">
+         <string notr="true">font: 8pt &quot;Cooper Black&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Nome:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="line_nome">
+        <property name="styleSheet">
+         <string notr="true">color:rgb(170, 255, 255)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="botao_pesquisar">
+        <property name="styleSheet">
+         <string notr="true">font: 8pt &quot;Cooper Black&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Pesquisar</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tabela">
+      <property name="styleSheet">
+       <string notr="true">font: 8pt &quot;Copperplate Gothic Bold&quot;;
+background-color: blue;
+;</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>Código</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Copperplate Gothic Bold</family>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Nome</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Copperplate Gothic Bold</family>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Preço</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Copperplate Gothic Bold</family>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Marca</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Copperplate Gothic Bold</family>
+        </font>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -78,6 +78,7 @@ class Ui_Pesquisa_aluno(object):
         cursor.execute(sql,("%" + nome + "%",))
         dados = cursor.fetchall()
         print(dados)
+
         self.tableWidget.setRowCount(len(dados))
         cont=0 #contador de linhas
         for linha in dados:
