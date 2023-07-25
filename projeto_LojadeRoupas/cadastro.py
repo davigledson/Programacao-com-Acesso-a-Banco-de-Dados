@@ -293,7 +293,7 @@ class Ui_telaCadastro(object):
         cursor.execute(sql, (nome,senha, tipoFuncionario, turno, estagiario, resunerado, obs))
         conexao.commit()
         # print('INSERIDO COM SUCESSO')
-        # print('INSERIDO COM SUCESSO')
+
 
         msg = QMessageBox()
         msg.setWindowTitle('AVISO')

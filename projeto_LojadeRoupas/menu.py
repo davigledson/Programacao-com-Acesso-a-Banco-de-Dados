@@ -7,6 +7,7 @@
 
 
 
+
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtWidgets import QTableWidgetItem, QMessageBox
 
@@ -17,14 +18,12 @@ conexao = mysql.connector.connect(
     password='', database='lojaroupa'
 )
 cursor = conexao.cursor()
-print('conectado ao DB')
 
 
 class Ui_LojadeRoupa(object):
     def setupUi(self, LojadeRoupa):
         LojadeRoupa.setObjectName("LojadeRoupa")
         LojadeRoupa.resize(831, 576)
-        LojadeRoupa.setMaximumSize(831,576)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("icones/roupas-masculinas.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         LojadeRoupa.setWindowIcon(icon)
@@ -45,9 +44,6 @@ class Ui_LojadeRoupa(object):
         self.pushButton_login.setIcon(icon1)
         self.pushButton_login.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_login.setObjectName("pushButton_login")
-
-        self.pushButton_login.clicked.connect(self.trocarPaginaLogin)
-
         self.verticalLayout.addWidget(self.pushButton_login, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.pushButton_cadastrar = QtWidgets.QPushButton(parent=self.verticalWidget_miniMenu)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Fixed)
@@ -62,9 +58,6 @@ class Ui_LojadeRoupa(object):
         self.pushButton_cadastrar.setIcon(icon2)
         self.pushButton_cadastrar.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_cadastrar.setObjectName("pushButton_cadastrar")
-
-
-
         self.verticalLayout.addWidget(self.pushButton_cadastrar, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.pushButton_cadastrar_usuario = QtWidgets.QPushButton(parent=self.verticalWidget_miniMenu)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Fixed)
@@ -79,9 +72,6 @@ class Ui_LojadeRoupa(object):
         self.pushButton_cadastrar_usuario.setIcon(icon3)
         self.pushButton_cadastrar_usuario.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_cadastrar_usuario.setObjectName("pushButton_cadastrar_usuario")
-
-        self.pushButton_cadastrar_usuario.clicked.connect(self.abrirPaginaCadastrar)
-
         self.verticalLayout.addWidget(self.pushButton_cadastrar_usuario, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.pushButton_cadastrar_vestuario = QtWidgets.QPushButton(parent=self.verticalWidget_miniMenu)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Fixed)
@@ -96,10 +86,6 @@ class Ui_LojadeRoupa(object):
         self.pushButton_cadastrar_vestuario.setIcon(icon4)
         self.pushButton_cadastrar_vestuario.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_cadastrar_vestuario.setObjectName("pushButton_cadastrar_vestuario")
-
-        self.pushButton_cadastrar_vestuario.clicked.connect(self.trocarPaginaVestuario)
-
-
         self.verticalLayout.addWidget(self.pushButton_cadastrar_vestuario, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.pushButton_pesquisa = QtWidgets.QPushButton(parent=self.verticalWidget_miniMenu)
         self.pushButton_pesquisa.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
@@ -109,9 +95,6 @@ class Ui_LojadeRoupa(object):
         self.pushButton_pesquisa.setIcon(icon5)
         self.pushButton_pesquisa.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_pesquisa.setObjectName("pushButton_pesquisa")
-
-        self.pushButton_pesquisa.clicked.connect(self.trocarPaginaPesquisa)
-
         self.verticalLayout.addWidget(self.pushButton_pesquisa, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.pushButton_sobre = QtWidgets.QPushButton(parent=self.verticalWidget_miniMenu)
         self.pushButton_sobre.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
@@ -122,9 +105,6 @@ class Ui_LojadeRoupa(object):
         self.pushButton_sobre.setIcon(icon6)
         self.pushButton_sobre.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_sobre.setObjectName("pushButton_sobre")
-
-        self.pushButton_sobre.clicked.connect(self.trocarPaginaSobre)
-
         self.verticalLayout.addWidget(self.pushButton_sobre, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.label_left_Image = QtWidgets.QLabel(parent=self.Menu)
         self.label_left_Image.setGeometry(QtCore.QRect(0, 0, 281, 601))
@@ -258,16 +238,10 @@ class Ui_LojadeRoupa(object):
 "    background-color:rgba(150, 123, 111, 255);\n"
 "}")
         self.botao_entrar.setObjectName("botao_entrar")
-
-        self.botao_entrar.clicked.connect(self.login)
-
         self.label_4_esqueceuSenha = QtWidgets.QLabel(parent=self.widget_login)
         self.label_4_esqueceuSenha.setGeometry(QtCore.QRect(320, 310, 181, 16))
         self.label_4_esqueceuSenha.setStyleSheet("color:rgba(0,0,0,210);")
         self.label_4_esqueceuSenha.setObjectName("label_4_esqueceuSenha")
-
-
-
         self.horizontalLayoutWidget = QtWidgets.QWidget(parent=self.widget_login)
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(330, 350, 141, 32))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
@@ -317,9 +291,6 @@ class Ui_LojadeRoupa(object):
         self.StackedWidget_Paginas.addWidget(self.page_login)
         self.page_pesquisa = QtWidgets.QWidget()
         self.page_pesquisa.setObjectName("page_pesquisa")
-
-
-
         self.layoutWidget = QtWidgets.QWidget(parent=self.page_pesquisa)
         self.layoutWidget.setGeometry(QtCore.QRect(20, 10, 521, 42))
         self.layoutWidget.setObjectName("layoutWidget")
@@ -347,9 +318,6 @@ class Ui_LojadeRoupa(object):
         self.botao_pesquisar.setIcon(icon5)
         self.botao_pesquisar.setIconSize(QtCore.QSize(25, 25))
         self.botao_pesquisar.setObjectName("botao_pesquisar")
-
-        self.botao_pesquisar.clicked.connect(self.pesquisar)
-
         self.horizontalLayout.addWidget(self.botao_pesquisar)
         self.tabela = QtWidgets.QTableWidget(parent=self.page_pesquisa)
         self.tabela.setGeometry(QtCore.QRect(0, 80, 541, 289))
@@ -360,10 +328,10 @@ class Ui_LojadeRoupa(object):
         font.setItalic(False)
         font.setWeight(50)
         self.tabela.setFont(font)
-        self.tabela.setStyleSheet("font: 8pt \"Copperplate Gothic Bold\";\n"
+        self.tabela.setStyleSheet("\n"
 "")
         self.tabela.setObjectName("tabela")
-        self.tabela.setColumnCount(4)
+        self.tabela.setColumnCount(6)
         self.tabela.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
@@ -380,19 +348,23 @@ class Ui_LojadeRoupa(object):
         item.setFont(font)
         self.tabela.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI Semibold")
-        font.setBold(True)
-        font.setWeight(75)
-        item.setFont(font)
         self.tabela.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabela.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
         font.setFamily("Segoe UI Semibold")
         font.setBold(True)
         font.setWeight(75)
         item.setFont(font)
-        self.tabela.setHorizontalHeaderItem(3, item)
+        self.tabela.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Semibold")
+        font.setBold(True)
+        font.setWeight(75)
+        item.setFont(font)
+        self.tabela.setHorizontalHeaderItem(5, item)
         self.label_bandeiras = QtWidgets.QLabel(parent=self.page_pesquisa)
         self.label_bandeiras.setGeometry(QtCore.QRect(-10, -10, 581, 601))
         self.label_bandeiras.setText("")
@@ -416,7 +388,7 @@ class Ui_LojadeRoupa(object):
         self.label_nome_sistema_de_loja_2.setStyleSheet("font: italic 25pt \"Brush Script MT\";")
         self.label_nome_sistema_de_loja_2.setObjectName("label_nome_sistema_de_loja_2")
         self.textEdit_detalhes = QtWidgets.QTextEdit(parent=self.page_registrar_roupas)
-        self.textEdit_detalhes.setGeometry(QtCore.QRect(60, 290, 401, 161))
+        self.textEdit_detalhes.setGeometry(QtCore.QRect(60, 290, 401, 101))
         self.textEdit_detalhes.setStyleSheet("background-color:rgba(0,0,0,0);\n"
 "border:none;\n"
 "border-bottom:2px solid rgba(46,82,101,200);\n"
@@ -427,7 +399,7 @@ class Ui_LojadeRoupa(object):
 "padding-bottom: 7px;")
         self.textEdit_detalhes.setObjectName("textEdit_detalhes")
         self.label_detalhes = QtWidgets.QLabel(parent=self.page_registrar_roupas)
-        self.label_detalhes.setGeometry(QtCore.QRect(60, 270, 141, 21))
+        self.label_detalhes.setGeometry(QtCore.QRect(60, 260, 141, 21))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Semibold")
         font.setPointSize(12)
@@ -469,7 +441,7 @@ class Ui_LojadeRoupa(object):
 "padding-bottom: 7px;")
         self.line_descricao_roupa.setObjectName("line_descricao_roupa")
         self.label_barra2 = QtWidgets.QLabel(parent=self.page_registrar_roupas)
-        self.label_barra2.setGeometry(QtCore.QRect(60, 120, 401, 20))
+        self.label_barra2.setGeometry(QtCore.QRect(60, 130, 401, 20))
         self.label_barra2.setStyleSheet("background-color:rgba(0,0,0,0);\n"
 "border:none;\n"
 "border-bottom:2px solid rgba(46,82,101,200);\n"
@@ -508,7 +480,7 @@ class Ui_LojadeRoupa(object):
         self.spinBox_quantidade.setObjectName("spinBox_quantidade")
         self.horizontalLayout_4.addWidget(self.spinBox_quantidade)
         self.horizontalLayoutWidget_3 = QtWidgets.QWidget(parent=self.page_registrar_roupas)
-        self.horizontalLayoutWidget_3.setGeometry(QtCore.QRect(60, 220, 401, 31))
+        self.horizontalLayoutWidget_3.setGeometry(QtCore.QRect(60, 210, 401, 31))
         self.horizontalLayoutWidget_3.setObjectName("horizontalLayoutWidget_3")
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_3)
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
@@ -527,7 +499,7 @@ class Ui_LojadeRoupa(object):
         self.doubleSpinBox_preco.setObjectName("doubleSpinBox_preco")
         self.horizontalLayout_5.addWidget(self.doubleSpinBox_preco)
         self.label_barra2_3 = QtWidgets.QLabel(parent=self.page_registrar_roupas)
-        self.label_barra2_3.setGeometry(QtCore.QRect(60, 230, 401, 20))
+        self.label_barra2_3.setGeometry(QtCore.QRect(60, 230, 401, 10))
         self.label_barra2_3.setStyleSheet("background-color:rgba(0,0,0,0);\n"
 "border:none;\n"
 "border-bottom:2px solid rgba(46,82,101,200);\n"
@@ -550,6 +522,30 @@ class Ui_LojadeRoupa(object):
         self.line.setFrameShape(QtWidgets.QFrame.Shape.VLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
         self.line.setObjectName("line")
+        self.botao_entrar_vestuario = QtWidgets.QPushButton(parent=self.page_registrar_roupas)
+        self.botao_entrar_vestuario.setGeometry(QtCore.QRect(60, 410, 401, 40))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.botao_entrar_vestuario.setFont(font)
+        self.botao_entrar_vestuario.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.botao_entrar_vestuario.setStyleSheet("QPushButton#PushButton{\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(11, 131, 120, 219), stop:1 rgba(85, 98, 112, 226));\n"
+"    color:rgba(255, 255, 255, 210);\n"
+"    border-radius:5px;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton:hover{\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(150, 123, 111, 219), stop:1 rgba(85, 81, 84, 226));\n"
+"}\n"
+"\n"
+"QPushButton#pushButton:pressed{\n"
+"    padding-left:5px;\n"
+"    padding-top:5px;\n"
+"    background-color:rgba(150, 123, 111, 255);\n"
+"}")
+        self.botao_entrar_vestuario.setObjectName("botao_entrar_vestuario")
         self.label_fundo_vestuario.raise_()
         self.line.raise_()
         self.label_nome_sistema_de_loja_2.raise_()
@@ -562,13 +558,11 @@ class Ui_LojadeRoupa(object):
         self.label_barra2_2.raise_()
         self.horizontalLayoutWidget_2.raise_()
         self.horizontalLayoutWidget_3.raise_()
+        self.botao_entrar_vestuario.raise_()
         self.label_barra2_3.raise_()
         self.StackedWidget_Paginas.addWidget(self.page_registrar_roupas)
         self.page_sobre = QtWidgets.QWidget()
         self.page_sobre.setObjectName("page_sobre")
-
-
-
         self.label_wave = QtWidgets.QLabel(parent=self.page_sobre)
         self.label_wave.setGeometry(QtCore.QRect(0, 0, 571, 181))
         self.label_wave.setStyleSheet("")
@@ -606,7 +600,8 @@ class Ui_LojadeRoupa(object):
         self.label_img_pedro_3.setObjectName("label_img_pedro_3")
         self.label_fundo_sobre = QtWidgets.QLabel(parent=self.page_sobre)
         self.label_fundo_sobre.setGeometry(QtCore.QRect(-10, 0, 581, 581))
-        self.label_fundo_sobre.setStyleSheet("background-color: rgb(0, 0, 0);")
+        self.label_fundo_sobre.setStyleSheet("\n"
+"background-color: rgb(0, 0, 0);")
         self.label_fundo_sobre.setText("")
         self.label_fundo_sobre.setObjectName("label_fundo_sobre")
         self.label_title = QtWidgets.QLabel(parent=self.page_sobre)
@@ -673,7 +668,7 @@ class Ui_LojadeRoupa(object):
         self.textBrowser_pedro.setOpenExternalLinks(True)
         self.textBrowser_pedro.setObjectName("textBrowser_pedro")
         self.textBrowser_davi = QtWidgets.QTextBrowser(parent=self.page_sobre)
-        self.textBrowser_davi.setGeometry(QtCore.QRect(310, 230, 191, 70))
+        self.textBrowser_davi.setGeometry(QtCore.QRect(300, 230, 231, 51))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Semibold")
         font.setBold(True)
@@ -684,7 +679,7 @@ class Ui_LojadeRoupa(object):
         self.textBrowser_davi.setOpenExternalLinks(True)
         self.textBrowser_davi.setObjectName("textBrowser_davi")
         self.textBrowser_maldades = QtWidgets.QTextBrowser(parent=self.page_sobre)
-        self.textBrowser_maldades.setGeometry(QtCore.QRect(50, 480, 191, 91))
+        self.textBrowser_maldades.setGeometry(QtCore.QRect(10, 490, 251, 71))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Semibold")
         font.setBold(True)
@@ -695,7 +690,7 @@ class Ui_LojadeRoupa(object):
         self.textBrowser_maldades.setOpenExternalLinks(True)
         self.textBrowser_maldades.setObjectName("textBrowser_maldades")
         self.textBrowser_bruno = QtWidgets.QTextBrowser(parent=self.page_sobre)
-        self.textBrowser_bruno.setGeometry(QtCore.QRect(330, 480, 191, 90))
+        self.textBrowser_bruno.setGeometry(QtCore.QRect(310, 480, 221, 101))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Semibold")
         font.setBold(True)
@@ -766,10 +761,14 @@ class Ui_LojadeRoupa(object):
         item = self.tabela.horizontalHeaderItem(1)
         item.setText(_translate("LojadeRoupa", "Nome"))
         item = self.tabela.horizontalHeaderItem(2)
-        item.setText(_translate("LojadeRoupa", "Preço"))
+        item.setText(_translate("LojadeRoupa", "Vestimenta"))
         item = self.tabela.horizontalHeaderItem(3)
-        item.setText(_translate("LojadeRoupa", "Marca"))
-        self.label_nome_sistema_de_loja_2.setText(_translate("LojadeRoupa", "Registrar roupas"))
+        item.setText(_translate("LojadeRoupa", "Quantidade"))
+        item = self.tabela.horizontalHeaderItem(4)
+        item.setText(_translate("LojadeRoupa", "Preço"))
+        item = self.tabela.horizontalHeaderItem(5)
+        item.setText(_translate("LojadeRoupa", "Detalhes"))
+        self.label_nome_sistema_de_loja_2.setText(_translate("LojadeRoupa", "Registrar Roupas"))
         self.label_detalhes.setText(_translate("LojadeRoupa", "Detalhes:"))
         self.radioButton_masculino.setText(_translate("LojadeRoupa", "Masculina"))
         self.radioButton_unisex.setText(_translate("LojadeRoupa", "Feminina"))
@@ -778,6 +777,7 @@ class Ui_LojadeRoupa(object):
         self.line_descricao_roupa.setPlaceholderText(_translate("LojadeRoupa", "Descrição da Roupa"))
         self.label_quantidade.setText(_translate("LojadeRoupa", "Quantidade"))
         self.label_preco.setText(_translate("LojadeRoupa", "Preço:"))
+        self.botao_entrar_vestuario.setText(_translate("LojadeRoupa", "REGISTRAR"))
         self.label_title.setText(_translate("LojadeRoupa", "Sobre os desenvolvedores"))
         self.label_nome_3.setText(_translate("LojadeRoupa", "Davi Gledson"))
         self.label_nome_5.setText(_translate("LojadeRoupa", "Maeldson Cavalcante"))
@@ -802,8 +802,18 @@ class Ui_LojadeRoupa(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Segoe UI Semibold\'; font-size:8.25pt; font-weight:600; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7.8pt;\">Sou Alisson Bruno,tenho 20 anos e curso informática no IFRN e Administração na Uern, Você pode me seguir no Github: </span><a href=\"https://github.com/Bruno768\"><span style=\" font-size:8pt; text-decoration: underline; color:#0000ff;\">https://github.com/Bruno768</span></a></p></body></html>"))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7.8pt;\">Sou Alisson Bruno,tenho 20 anos e curso informática no IFRN e Administração na Uern, adquirido experiência incrível durante essa jornada. Você pode me seguir no Github: </span><a href=\"https://github.com/Bruno768\"><span style=\" font-size:8pt; text-decoration: underline; color:#0000ff;\">https://github.com/Bruno768</span></a></p></body></html>"))
         self.label_nome_usuario.setText(_translate("LojadeRoupa", "<html><head/><body><p align=\"center\"><br/></p></body></html>"))
+
+        self.pushButton_sobre.clicked.connect(self.trocarPaginaSobre)
+        self.pushButton_pesquisa.clicked.connect(self.trocarPaginaPesquisa)
+        self.pushButton_cadastrar_vestuario.clicked.connect(self.trocarPaginaVestuario)
+        self.pushButton_login.clicked.connect(self.trocarPaginaLogin)
+        self.pushButton_cadastrar_usuario.clicked.connect(self.abrirPaginaCadastrar)
+
+        self.botao_pesquisar.clicked.connect(self.pesquisar)
+        self.botao_entrar.clicked.connect(self.login)
+        self.botao_entrar_vestuario.clicked.connect(self.cadastrarRoupas)
 
     def trocarPaginaPesquisa(self):
         if self.login() == True:
@@ -862,13 +872,17 @@ class Ui_LojadeRoupa(object):
         for linha in dados:
             codigo = QTableWidgetItem(str(linha[0]))
             nome = QTableWidgetItem(linha[1])
-            preco = QTableWidgetItem(str(linha[2]))
-            marca = QTableWidgetItem(linha[3])
+            tipoVestimenta = QTableWidgetItem(linha[2])
+            quantidade = QTableWidgetItem(str(linha[3]))
+            preco = QTableWidgetItem(str(linha[4]))
+            detalhes = QTableWidgetItem(linha[5])
 
             self.tabela.setItem(cont, 0, codigo)
             self.tabela.setItem(cont, 1, nome)
-            self.tabela.setItem(cont, 2, preco)
-            self.tabela.setItem(cont, 3, marca)
+            self.tabela.setItem(cont, 2, tipoVestimenta)
+            self.tabela.setItem(cont, 3, quantidade)
+            self.tabela.setItem(cont, 4, preco)
+            self.tabela.setItem(cont, 5, detalhes)
             cont += 1
         self.tabela.show()
 
@@ -890,9 +904,44 @@ class Ui_LojadeRoupa(object):
             self.StackedWidget_Paginas.setCurrentWidget(self.page_pesquisa)
             self.label_nome_usuario.setText(nome)
 
-
             self.pushButton_login.setDisabled(True)
             return True
+
+    def cadastrarRoupas(self):
+        descricao = self.line_descricao_roupa.text()
+
+        tipoVestimenta = ""
+        if self.radioButton_masculino.isChecked():
+            tipoVestimenta = "Masculino"
+
+            #estao trocados
+        elif self.radioButton_feminino.isChecked():
+            tipoVestimenta = "Unisex"
+        elif self.radioButton_unisex.isChecked():
+            tipoVestimenta = "Feminino"
+
+        quantidade = self.spinBox_quantidade.text()
+        preco = self.doubleSpinBox_preco.text()
+        detalhes = self.textEdit_detalhes.toPlainText()
+
+        print(descricao, tipoVestimenta, quantidade, preco, detalhes)
+
+        sql = "INSERT INTO roupas VALUES(null,%s,%s,%s,%s,%s)"
+        cursor.execute(sql, (descricao, tipoVestimenta, quantidade, preco, detalhes))
+        conexao.commit()
+
+        msg = QMessageBox()
+        msg.setWindowTitle('AVISO')
+        msg.setText('Inserido com sucesso')
+        msg.exec()
+
+        self.line_descricao_roupa.setText('')
+        self.radioButton_feminino.setChecked(True)
+        self.radioButton_unisex.setChecked(False)  # opcional
+        self.radioButton_masculino.setChecked(False)
+        self.spinBox_quantidade.setValue(0)
+        self.doubleSpinBox_preco.setValue(0)
+        self.textEdit_detalhes.setText('')
 
 
 if __name__ == "__main__":

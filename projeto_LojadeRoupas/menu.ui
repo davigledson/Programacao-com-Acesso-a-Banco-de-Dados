@@ -679,7 +679,7 @@ border: none;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 8pt &quot;Copperplate Gothic Bold&quot;;
+       <string notr="true">
 </string>
       </property>
       <column>
@@ -708,6 +708,16 @@ border: none;</string>
       </column>
       <column>
        <property name="text">
+        <string>Vestimenta</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Quantidade</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
         <string>Preço</string>
        </property>
        <property name="font">
@@ -720,7 +730,7 @@ border: none;</string>
       </column>
       <column>
        <property name="text">
-        <string>Marca</string>
+        <string>Detalhes</string>
        </property>
        <property name="font">
         <font>
@@ -787,7 +797,7 @@ border: none;</string>
        <string notr="true">font: italic 25pt &quot;Brush Script MT&quot;;</string>
       </property>
       <property name="text">
-       <string>Registrar roupas</string>
+       <string>Registrar Roupas</string>
       </property>
      </widget>
      <widget class="QTextEdit" name="textEdit_detalhes">
@@ -796,7 +806,7 @@ border: none;</string>
         <x>60</x>
         <y>290</y>
         <width>401</width>
-        <height>161</height>
+        <height>101</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -814,7 +824,7 @@ padding-bottom: 7px;</string>
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>270</y>
+        <y>260</y>
         <width>141</width>
         <height>21</height>
        </rect>
@@ -912,7 +922,7 @@ padding-bottom: 7px;</string>
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>120</y>
+        <y>130</y>
         <width>401</width>
         <height>20</height>
        </rect>
@@ -988,7 +998,7 @@ padding-bottom: 7px;</string>
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>220</y>
+        <y>210</y>
         <width>401</width>
         <height>31</height>
        </rect>
@@ -1024,7 +1034,7 @@ padding-bottom: 7px;</string>
         <x>60</x>
         <y>230</y>
         <width>401</width>
-        <height>20</height>
+        <height>10</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1063,6 +1073,46 @@ padding-bottom: 7px;
        <enum>Qt::Vertical</enum>
       </property>
      </widget>
+     <widget class="QPushButton" name="botao_entrar_vestuario">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>410</y>
+        <width>401</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#PushButton{
+background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(11, 131, 120, 219), stop:1 rgba(85, 98, 112, 226));
+	color:rgba(255, 255, 255, 210);
+	border-radius:5px;
+}
+
+QPushButton#pushButton:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(150, 123, 111, 219), stop:1 rgba(85, 81, 84, 226));
+}
+
+QPushButton#pushButton:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(150, 123, 111, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>REGISTRAR</string>
+      </property>
+     </widget>
      <zorder>label_fundo_vestuario</zorder>
      <zorder>line</zorder>
      <zorder>label_nome_sistema_de_loja_2</zorder>
@@ -1075,6 +1125,7 @@ padding-bottom: 7px;
      <zorder>label_barra2_2</zorder>
      <zorder>horizontalLayoutWidget_2</zorder>
      <zorder>horizontalLayoutWidget_3</zorder>
+     <zorder>botao_entrar_vestuario</zorder>
      <zorder>label_barra2_3</zorder>
     </widget>
     <widget class="QWidget" name="page_sobre">
@@ -1198,7 +1249,8 @@ padding-bottom: 7px;
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 0, 0);</string>
+       <string notr="true">
+background-color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
        <string/>
@@ -1360,9 +1412,9 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="textBrowser_davi">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>300</x>
         <y>230</y>
-        <width>191</width>
+        <width>231</width>
         <height>51</height>
        </rect>
       </property>
@@ -1391,10 +1443,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="textBrowser_maldades">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>480</y>
-        <width>191</width>
-        <height>91</height>
+        <x>10</x>
+        <y>490</y>
+        <width>251</width>
+        <height>71</height>
        </rect>
       </property>
       <property name="font">
@@ -1422,9 +1474,9 @@ p, li { white-space: pre-wrap; }
      <widget class="QTextBrowser" name="textBrowser_bruno">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>310</x>
         <y>480</y>
-        <width>191</width>
+        <width>221</width>
         <height>101</height>
        </rect>
       </property>
@@ -1444,7 +1496,7 @@ background-color: rgb(0, 0, 0);</string>
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI Semibold'; font-size:8.25pt; font-weight:600; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt;Meu nome é Alisson Bruno,tenho 20 anos e atualmente estou cursando informática no IFRN e Administração na Uern, adquirido experiência incrível durante essa jornada. Você pode me seguir no Github: &lt;/span&gt;&lt;a href=&quot;https://github.com/Bruno768&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/Bruno768&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt;Sou Alisson Bruno,tenho 20 anos e curso informática no IFRN e Administração na Uern, adquirido experiência incrível durante essa jornada. Você pode me seguir no Github: &lt;/span&gt;&lt;a href=&quot;https://github.com/Bruno768&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/Bruno768&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="openExternalLinks">
        <bool>true</bool>
