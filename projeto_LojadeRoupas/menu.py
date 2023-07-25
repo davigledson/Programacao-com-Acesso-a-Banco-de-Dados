@@ -13,6 +13,7 @@ from PyQt6.QtWidgets import QTableWidgetItem, QMessageBox
 
 
 import mysql.connector
+
 conexao = mysql.connector.connect(
     host='localhost', user='root',
     password='', database='lojaroupa'

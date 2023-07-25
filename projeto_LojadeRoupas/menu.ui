@@ -255,7 +255,7 @@
      <string notr="true">backgroud:rgb(255,255,255)</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page_login">
      <widget class="QWidget" name="widget_login" native="true">
