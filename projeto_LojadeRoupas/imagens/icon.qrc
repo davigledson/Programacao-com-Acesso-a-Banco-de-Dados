@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="ico">
+    <file>comprar1.jpg</file>
+    <file>retrato.jpg</file>
+  </qresource>
+</RCC>

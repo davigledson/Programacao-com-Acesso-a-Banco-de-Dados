@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>LojadeRoupa</class>
+ <widget class="QMainWindow" name="LojadeRoupa">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>854</width>
-    <height>600</height>
+    <width>831</width>
+    <height>576</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Loja de Roupa</string>
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../Desktop/68948.png</normaloff>../../../Desktop/68948.png</iconset>
+    <normaloff>icones/roupas-masculinas.png</normaloff>icones/roupas-masculinas.png</iconset>
   </property>
   <widget class="QWidget" name="Menu">
    <widget class="QWidget" name="verticalWidget_miniMenu" native="true">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>60</x>
       <y>270</y>
-      <width>131</width>
-      <height>231</height>
+      <width>171</width>
+      <height>251</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -44,7 +44,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../Desktop/log-in.svg</normaloff>../../../Desktop/log-in.svg</iconset>
+         <normaloff>icones/log-in.svg</normaloff>icones/log-in.svg</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -56,6 +56,12 @@
      </item>
      <item alignment="Qt::AlignLeft">
       <widget class="QPushButton" name="pushButton_cadastrar">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
@@ -67,7 +73,65 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../Desktop/book-open.svg</normaloff>../../../Desktop/book-open.svg</iconset>
+         <normaloff>icones/book-open.svg</normaloff>icones/book-open.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QPushButton" name="pushButton_cadastrar_usuario">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 10px;font-size:18px;</string>
+       </property>
+       <property name="text">
+        <string>Usuario</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>icones/add-user.png</normaloff>icones/add-user.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QPushButton" name="pushButton_cadastrar_vestuario">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 10px;font-size:18px;</string>
+       </property>
+       <property name="text">
+        <string>vestuário</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>icones/hanger.png</normaloff>icones/hanger.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -90,7 +154,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../Desktop/search.svg</normaloff>../../../Desktop/search.svg</iconset>
+         <normaloff>icones/search.svg</normaloff>icones/search.svg</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -116,7 +180,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../Desktop/users.svg</normaloff>../../../Desktop/users.svg</iconset>
+         <normaloff>icones/users.svg</normaloff>icones/users.svg</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -147,7 +211,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../Desktop/loja de roupas (3).png</pixmap>
+     <pixmap>imagens/label_left_Image.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -175,7 +239,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>260</x>
       <y>0</y>
       <width>571</width>
       <height>611</height>
@@ -193,13 +257,352 @@
     <property name="currentIndex">
      <number>0</number>
     </property>
+    <widget class="QWidget" name="page_login">
+     <widget class="QWidget" name="widget_login" native="true">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>550</width>
+        <height>500</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#pushButton{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(11, 131, 120, 219), stop:1 rgba(85, 98, 112, 226));
+	color:rgba(255, 255, 255, 210);
+	border-radius:5px;
+}
+
+QPushButton#pushButton:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(150, 123, 111, 219), stop:1 rgba(85, 81, 84, 226));
+}
+
+QPushButton#pushButton:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(150, 123, 111, 255);
+}
+    
+QPushButton#pushButton_2, #pushButton_3, #pushButton_4, #pushButton_5{
+	background-color: rgba(0, 0, 0, 0);
+	color:rgba(85, 98, 112, 255);
+}
+
+QPushButton#pushButton_2:hover, #pushButton_3:hover, #pushButton_4:hover, #pushButton_5:hover{
+	color: rgba(131, 96, 53, 255);
+}
+
+QPushButton#pushButton_2:pressed, #pushButton_3:pressed, #pushButton_4:pressed, #pushButton_5:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	color:rgba(91, 88, 53, 255);
+}
+</string>
+      </property>
+      <widget class="QLabel" name="label_imagem_login">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>-10</y>
+         <width>280</width>
+         <height>441</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/background.jpg);
+
+
+border-top-left-radius:50px;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>imagens/login_imagem.jpeg</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_fundo_card_login">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>0</y>
+         <width>240</width>
+         <height>430</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-bottom-right-radius: 50px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(250, 215, 247, 0.418), stop:1 rgba(75, 136, 228, 0.5));
+
+border-color: rgb(85, 255, 0);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_login">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>50</y>
+         <width>100</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgba(0,0,0,200);</string>
+       </property>
+       <property name="text">
+        <string>Login</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="line_usuario">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>100</y>
+         <width>190</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgba(0,0,0,0);
+border:none;
+border-bottom:2px solid rgba(46,82,101,200);
+color:rgba(0,0,0,249);
+padding-bottom: 7px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Nome do Usuário</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="line_senha">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>160</y>
+         <width>190</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgba(0,0,0,0);
+border:none;
+border-bottom:2px solid rgba(46,82,101,200);
+color:rgba(0,0,0,249);
+padding-bottom: 7px;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+       <property name="placeholderText">
+        <string>Senha</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="botao_entrar">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>240</y>
+         <width>190</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#PushButton{
+background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(11, 131, 120, 219), stop:1 rgba(85, 98, 112, 226));
+	color:rgba(255, 255, 255, 210);
+	border-radius:5px;
+}
+
+QPushButton#pushButton:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(150, 123, 111, 219), stop:1 rgba(85, 81, 84, 226));
+}
+
+QPushButton#pushButton:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(150, 123, 111, 255);
+}</string>
+       </property>
+       <property name="text">
+        <string>ENTRAR</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4_esqueceuSenha">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>310</y>
+         <width>181</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgba(0,0,0,210);</string>
+       </property>
+       <property name="text">
+        <string>Não tem uma conta? cadastre-se</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="horizontalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>350</y>
+         <width>141</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="pushButton_4">
+          <property name="maximumSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Social Media Circled</family>
+            <pointsize>15</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Q</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_3">
+          <property name="maximumSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Social Media Circled</family>
+            <pointsize>15</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>D</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="maximumSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Social Media Circled</family>
+            <pointsize>15</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>E</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_5">
+          <property name="maximumSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Social Media Circled</family>
+            <pointsize>15</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>M</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_bandeiras_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-10</y>
+        <width>571</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>imagens/roupas.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <zorder>label_bandeiras_2</zorder>
+     <zorder>widget_login</zorder>
+    </widget>
     <widget class="QWidget" name="page_pesquisa">
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>11</y>
-        <width>541</width>
+        <x>20</x>
+        <y>10</y>
+        <width>521</width>
         <height>42</height>
        </rect>
       </property>
@@ -217,8 +620,17 @@
        <item>
         <widget class="QLineEdit" name="line_nome">
          <property name="styleSheet">
-          <string notr="true">color:rgb(170, 255, 255);
-</string>
+          <string notr="true">background-color:rgba(0,0,0,0);
+border:none;
+border-bottom:2px solid rgba(46,82,101,200);
+color:rgba(0,0,0,249);
+padding-bottom: 7px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>busca...</string>
          </property>
         </widget>
        </item>
@@ -236,7 +648,7 @@ border: none;</string>
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../../Desktop/search.svg</normaloff>../../../Desktop/search.svg</iconset>
+           <normaloff>icones/search.svg</normaloff>icones/search.svg</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -319,11 +731,11 @@ border: none;</string>
        </property>
       </column>
      </widget>
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="label_bandeiras">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>0</y>
+        <x>-10</x>
+        <y>-10</y>
         <width>581</width>
         <height>601</height>
        </rect>
@@ -332,33 +744,730 @@ border: none;</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../Desktop/Design 1.png</pixmap>
+       <pixmap>imagens/roupas.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
       </property>
      </widget>
-     <zorder>label_4</zorder>
+     <zorder>label_bandeiras</zorder>
      <zorder>layoutWidget</zorder>
      <zorder>tabela</zorder>
     </widget>
-    <widget class="QWidget" name="page">
-     <widget class="QLabel" name="label">
+    <widget class="QWidget" name="page_registrar_roupas">
+     <widget class="QLabel" name="label_fundo_vestuario">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>180</y>
-        <width>47</width>
-        <height>13</height>
+        <x>0</x>
+        <y>0</y>
+        <width>571</width>
+        <height>581</height>
        </rect>
       </property>
       <property name="text">
-       <string>pagina 1</string>
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>imagens/roupas.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
       </property>
      </widget>
+     <widget class="QLabel" name="label_nome_sistema_de_loja_2">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>0</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: italic 25pt &quot;Brush Script MT&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Registrar roupas</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_detalhes">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>290</y>
+        <width>401</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0,0,0,0);
+border:none;
+border-bottom:2px solid rgba(46,82,101,200);
+border-top:2px solid rgba(46,82,101,200);
+border-left:2px solid rgba(46,82,101,200);
+border-right:2px solid rgba(46,82,101,200);
+color:rgba(0,0,0,249);
+padding-bottom: 7px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_detalhes">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>270</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Semibold</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Detalhes:</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>110</y>
+        <width>251</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QRadioButton" name="radioButton_masculino">
+         <property name="text">
+          <string>Masculina</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_unisex">
+         <property name="text">
+          <string>Feminina</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_feminino">
+         <property name="text">
+          <string>Unisex</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_tipoVestimenta">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>110</y>
+        <width>151</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Semibold</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Tipo de Vestimenta:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_descricao_roupa">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>70</y>
+        <width>401</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0,0,0,0);
+border:none;
+border-bottom:2px solid rgba(46,82,101,200);
+color:rgba(0,0,0,249);
+padding-bottom: 7px;</string>
+      </property>
+      <property name="placeholderText">
+       <string>Descrição da Roupa</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_barra2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>120</y>
+        <width>401</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0,0,0,0);
+border:none;
+border-bottom:2px solid rgba(46,82,101,200);
+
+color:rgba(0,0,0,249);
+padding-bottom: 7px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_barra2_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>180</y>
+        <width>401</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0,0,0,0);
+border:none;
+border-bottom:2px solid rgba(46,82,101,200);
+
+color:rgba(0,0,0,249);
+padding-bottom: 7px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>170</y>
+        <width>401</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_quantidade">
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Quantidade</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_quantidade">
+         <property name="maximum">
+          <number>99999</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>220</y>
+        <width>401</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_preco">
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Preço:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_preco">
+         <property name="maximum">
+          <double>9999999.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_barra2_3">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>230</y>
+        <width>401</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0,0,0,0);
+border:none;
+border-bottom:2px solid rgba(46,82,101,200);
+
+color:rgba(0,0,0,249);
+padding-bottom: 7px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>40</y>
+        <width>441</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0,0,0,0);
+border:none;
+border-bottom:2px solid rgba(46,82,101,200);
+border-top:2px solid rgba(46,82,101,200);
+border-left:2px solid rgba(46,82,101,200);
+border-right:2px solid rgba(46,82,101,200);
+color:rgba(0,0,0,249);
+padding-bottom: 7px;
+</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <zorder>label_fundo_vestuario</zorder>
+     <zorder>line</zorder>
+     <zorder>label_nome_sistema_de_loja_2</zorder>
+     <zorder>textEdit_detalhes</zorder>
+     <zorder>label_detalhes</zorder>
+     <zorder>layoutWidget_2</zorder>
+     <zorder>label_tipoVestimenta</zorder>
+     <zorder>line_descricao_roupa</zorder>
+     <zorder>label_barra2</zorder>
+     <zorder>label_barra2_2</zorder>
+     <zorder>horizontalLayoutWidget_2</zorder>
+     <zorder>horizontalLayoutWidget_3</zorder>
+     <zorder>label_barra2_3</zorder>
+    </widget>
+    <widget class="QWidget" name="page_sobre">
+     <widget class="QLabel" name="label_wave">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>571</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>imagens/wave.svg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_img_pedro_2">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>80</y>
+        <width>140</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>imagens/davi.jpeg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_img_pedro">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>80</y>
+        <width>140</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>imagens/pedro.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_img_pedro_4">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>350</y>
+        <width>140</width>
+        <height>140</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>imagens/bruno.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_img_pedro_3">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>350</y>
+        <width>140</width>
+        <height>140</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>imagens/maeldson.jpeg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_fundo_sobre">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>0</y>
+        <width>581</width>
+        <height>581</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_title">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>10</y>
+        <width>441</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Semibold</family>
+        <pointsize>22</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(39, 48, 54);
+border:none</string>
+      </property>
+      <property name="text">
+       <string>Sobre os desenvolvedores</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_nome_3">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>50</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Semibold</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Davi Gledson</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_nome_5">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>320</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Semibold</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Maeldson Cavalcante</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_nome_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>50</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Semibold</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Pedro Ricardo</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_nome_4">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>320</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Semibold</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Alisson Bruno</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_pedro">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>220</y>
+        <width>201</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Semibold</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI Semibold'; font-size:8.25pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt;&quot;&gt;Estudante de informática no IFRN. Atuamente desenvolvedor de software no IFRN no Campus Mossoró. Sou de Upanema e gosto de música e de escrever. Você pode me seguir no Github: &lt;/span&gt;&lt;a href=&quot;https://github.com/pedroricardo14&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/pedroricardo14&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="openExternalLinks">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_davi">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>230</y>
+        <width>191</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Semibold</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI Semibold'; font-size:8.25pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt;&quot;&gt;Desenvolvedor. Você pode me seguir no Github: &lt;/span&gt;&lt;a href=&quot;https://github.com/davigledson&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/davigledson&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="openExternalLinks">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_maldades">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>480</y>
+        <width>191</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Semibold</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI Semibold'; font-size:8.25pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt;&quot;&gt;Sou Maeldson, moro em Upanema-RN, gosto de ler e um grande fã de One Piece. Você pode me seguir no Github:&lt;/span&gt;&lt;a href=&quot;https://github.com/pedroricardo14&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/pedroricardo14&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="openExternalLinks">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_bruno">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>480</y>
+        <width>191</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Semibold</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI Semibold'; font-size:8.25pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt;Meu nome é Alisson Bruno,tenho 20 anos e atualmente estou cursando informática no IFRN e Administração na Uern, adquirido experiência incrível durante essa jornada. Você pode me seguir no Github: &lt;/span&gt;&lt;a href=&quot;https://github.com/Bruno768&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/Bruno768&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="openExternalLinks">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <zorder>label_fundo_sobre</zorder>
+     <zorder>label_wave</zorder>
+     <zorder>label_img_pedro_2</zorder>
+     <zorder>label_img_pedro</zorder>
+     <zorder>label_img_pedro_4</zorder>
+     <zorder>label_img_pedro_3</zorder>
+     <zorder>label_title</zorder>
+     <zorder>label_nome_3</zorder>
+     <zorder>label_nome_5</zorder>
+     <zorder>label_nome_2</zorder>
+     <zorder>label_nome_4</zorder>
+     <zorder>textBrowser_pedro</zorder>
+     <zorder>textBrowser_davi</zorder>
+     <zorder>textBrowser_maldades</zorder>
+     <zorder>textBrowser_bruno</zorder>
     </widget>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="label_nome_usuario">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -374,7 +1483,7 @@ border: none;</string>
      <string notr="true">color:'white';font: italic 20pt &quot;Brush Script MT&quot;;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Gledson da silva&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -390,7 +1499,7 @@ border: none;</string>
    <zorder>verticalWidget_miniMenu</zorder>
    <zorder>label_nome_sistema_de_loja</zorder>
    <zorder>StackedWidget_Paginas</zorder>
-   <zorder>label_3</zorder>
+   <zorder>label_nome_usuario</zorder>
   </widget>
  </widget>
  <resources/>
